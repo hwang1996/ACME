@@ -42,7 +42,6 @@ cm_discriminator = torch.nn.DataParallel(cross_modal_discriminator().cuda(), dev
 text_discriminator = torch.nn.DataParallel(text_emb_discriminator().cuda(), device_ids=device)
 netsD = torch.nn.DataParallel(D_NET128().cuda(), device_ids=device)
 
-
 ## load loss functions
 triplet_loss = TripletLoss(device, margin=0.3)
 img2text_criterion = nn.MultiLabelMarginLoss().cuda()
@@ -52,8 +51,6 @@ weights_class[0] = 0
 class_criterion = nn.CrossEntropyLoss(weight=weights_class).cuda()
 
 GAN_criterion = nn.BCELoss().cuda()
-cosine_crit = nn.CosineEmbeddingLoss(0.1).cuda()
-
 
 nz = opts.Z_DIM
 noise = Variable(torch.FloatTensor(opts.batch_size, nz)).cuda()
