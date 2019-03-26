@@ -7,9 +7,11 @@ CVPR 2019
 If you find this code useful, please consider citing:
 ```
 ```
+Our work is an extension of [im2recipe](https://github.com/torralba-lab/im2recipe-Pytorch), where you can borrow some food data pre-processing methods.
+
 ## Installation
-We use pytorch v0.5.0 and python 3.5.2 in our experiments.
-You need to download the Recipe1M dataset from [here](http://im2recipe.csail.mit.edu/dataset)
+We use pytorch v0.5.0 and python 3.5.2 in our experiments.  
+You need to download the Recipe1M dataset from [here](http://im2recipe.csail.mit.edu/dataset) first.
 
 
 ## Model for Testing
