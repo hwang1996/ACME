@@ -13,6 +13,17 @@ Our work is an extension of [im2recipe](https://github.com/torralba-lab/im2recip
 We use pytorch v0.5.0 and python 3.5.2 in our experiments.  
 You need to download the Recipe1M dataset from [here](http://im2recipe.csail.mit.edu/dataset) first.
 
+## Training
+Train the ACME model:
+```
+CUDA_VISIBLE_DEVICES=0 python train.py 
+```
+We did the experiments on single Tesla V100 GPU with batch size 64, which takes about 12 GB memory.
+
 
 ## Model for Testing
-Pre-trained models can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1svtpy-sD4pcaFfLGQNGaPIVjrKr-lhsT?usp=sharing)
+Pre-trained models can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1svtpy-sD4pcaFfLGQNGaPIVjrKr-lhsT?usp=sharing). 
+Test the model:
+```
+CUDA_VISIBLE_DEVICES=0 python test.py
+```
