@@ -4,6 +4,7 @@
 Wang Hao, Doyen Sahoo, Chenghao Liu, Ee-peng Lim, Steven C. H. Hoi   
 CVPR 2019  
 
+![](https://github.com/hwang1996/ACME/blob/master/imgs/cvpr_fig.pdf)
 If you find this code useful, please consider citing:
 ```
 ```
