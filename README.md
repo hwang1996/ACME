@@ -22,8 +22,8 @@ We did the experiments on single Tesla V100 GPU with batch size 64, which takes 
 
 
 ## Model for Testing
-Pre-trained models can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1svtpy-sD4pcaFfLGQNGaPIVjrKr-lhsT?usp=sharing). 
 Test the model:
 ```
 CUDA_VISIBLE_DEVICES=0 python test.py
 ```
+Pre-trained models can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1svtpy-sD4pcaFfLGQNGaPIVjrKr-lhsT?usp=sharing). 
