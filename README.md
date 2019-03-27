@@ -16,11 +16,11 @@ We use pytorch v0.5.0 and python 3.5.2 in our experiments.
 You need to download the Recipe1M dataset from [here](http://im2recipe.csail.mit.edu/dataset) first.
 
 ## Training
-Train the ACME model:
+Train the ACME model:GPU
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py 
 ```
-We did the experiments on single Tesla V100 GPU with batch size 64, which takes about 12 GB memory.
+We did the experiments with batch size 64, which takes about 12 GB memory.
 
 
 ## Model for Testing
