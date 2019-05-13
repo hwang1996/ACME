@@ -8,6 +8,12 @@ CVPR 2019
 
 If you find this code useful, please consider citing:
 ```
+@article{wang2019learning,
+  title={Learning Cross-Modal Embeddings with Adversarial Networks for Cooking Recipes and Food Images},
+  author={Wang, Hao and Sahoo, Doyen and Liu, Chenghao and Lim, Ee-peng and Hoi, Steven CH},
+  journal={arXiv preprint arXiv:1905.01273},
+  year={2019}
+}
 ```
 Our work is an extension of [im2recipe](https://github.com/torralba-lab/im2recipe-Pytorch), where you can borrow some food data pre-processing methods.
 
