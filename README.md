@@ -1,4 +1,4 @@
-# Adversarial Networks for Cross-Modal Food Retrieval
+# [Adversarial Networks for Cross-Modal Food Retrieval](https://arxiv.org/abs/1905.01273)
 ## Codes of ACME (PyTorch)
 *Learning Cross-Modal Embeddings with Adversarial Networks for Cooking Recipes and Food Images*  
 Wang Hao, Doyen Sahoo, Chenghao Liu, Ee-peng Lim, Steven C. H. Hoi   
@@ -8,10 +8,11 @@ CVPR 2019
 
 If you find this code useful, please consider citing:
 ```
-@article{wang2019learning,
-  title={Learning Cross-Modal Embeddings with Adversarial Networks for Cooking Recipes and Food Images},
+@inproceedings{wang2019learning,
+  title={Learning Cross-Modal Embeddings With Adversarial Networks for Cooking Recipes and Food Images},
   author={Wang, Hao and Sahoo, Doyen and Liu, Chenghao and Lim, Ee-peng and Hoi, Steven CH},
-  journal={arXiv preprint arXiv:1905.01273},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={11572--11581},
   year={2019}
 }
 ```
