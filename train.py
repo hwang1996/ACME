@@ -322,18 +322,20 @@ def validate(val_loader):
     end = time.time()
     for i, data in enumerate(tqdm(val_loader)):
 
-        img_emd_modal = image_model(data[0][0].cuda())
-        recipe_emb_modal = recipe_model(data[0][1].cuda(), data[0][2].cuda(), data[0][3].cuda(), data[0][4].cuda())
+        with torch.no_grad():
 
-        img_emd_modal = norm(fc_sia(img_emd_modal))
-        recipe_emb_modal = norm(fc_sia(recipe_emb_modal))  
-     
-        if i==0:
-            data0 = img_emd_modal.data.cpu().numpy()
-            data1 = recipe_emb_modal.data.cpu().numpy()
-        else:
-            data0 = np.concatenate((data0,img_emd_modal.data.cpu().numpy()),axis=0)
-            data1 = np.concatenate((data1,recipe_emb_modal.data.cpu().numpy()),axis=0)
+            img_emd_modal = image_model(data[0][0].cuda())
+            recipe_emb_modal = recipe_model(data[0][1].cuda(), data[0][2].cuda(), data[0][3].cuda(), data[0][4].cuda())
+
+            img_emd_modal = norm(fc_sia(img_emd_modal))
+            recipe_emb_modal = norm(fc_sia(recipe_emb_modal))  
+
+            if i==0:
+                data0 = img_emd_modal.data.cpu().numpy()
+                data1 = recipe_emb_modal.data.cpu().numpy()
+            else:
+                data0 = np.concatenate((data0,img_emd_modal.data.cpu().numpy()),axis=0)
+                data1 = np.concatenate((data1,recipe_emb_modal.data.cpu().numpy()),axis=0)
 
     medR_i2t, recall_i2t = rank_i2t(opts, data0, data1)
     print('I2T Val medR {medR:.4f}\t'
